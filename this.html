@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This keyword</h1>
+    <script>
+        const myObj ={
+            name : "shuvo das",
+            getFullName: function(){
+                console.log(this);
+                return 'Mr.' + this.name;
+            }
+        }
+        const anotherObj = {
+            name : 'akkas ali'
+        }
+        // anotherObj.getFullName = myObj.getFullName;
+        // console.log(anotherObj.getFullName);
+        // myObj.getFullName();
+        // anotherObj.getFullName();
+
+        function add(a,b){
+            console.log(this);
+            return a+b;
+        }
+        add(12,10);
+
+        anotherObj.added =  add;
+        anotherObj.added();
+        
+    </script>
+</body>
+</html>
